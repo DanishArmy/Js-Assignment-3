@@ -1,0 +1,141 @@
+/* 
+//chapter21-25
+//question 1
+var a= prompt("Enter your First name");
+var b= prompt("Enter your First name");
+document.write("Hello "+a+" "+b)
+//question 2
+var a = prompt("Enter your Favourute phone");
+document.write("My Favourute phone is  "+a+"<br>");
+document.write("length of string : "+(a.length));
+//question 3
+a="Pakistani"
+document.write("String : "+a+"<br>")
+document.write("Index Of n :  ")
+document.write(a.indexOf("n"))
+//n="asdf"
+//if (n.match("e")) {
+//	document.write("yes")
+//}
+//question 4
+a="Hello world"
+var b =a.lastIndexOf("l");
+document.write("String : "+a)
+document.write("<br>last inex of l : "+b)
+//question 5
+var a="Pakistani"
+document.write("String : "+a)
+var b=a.charAt(3)
+document.write("<br>Character at inedx 3 : "+b)
+//question 6
+var a= prompt("Enter your First name");
+var b= prompt("Enter your First name");
+var c = a.concat(b);
+document.write("Hello "+c);
+//question 7
+var str ="Hyedrabad";
+var res =str.replace("Hyedr", "islam");
+document.write(res);
+//question 8
+var message = "Ali and Sami are best friends. They play cricket and football together"
+var mes =message.replace("and", "&");
+var mess =mes.replace("and", "&");
+document.write(mess);
+//question 9
+var a ="472"
+document.write("Value : "+ a+"<br>"+"type : ")
+document.write(typeof a);
+var b =Number(a)
+document.write("<br>Value : "+ b+"<br>"+"type : ")
+document.write(typeof b);
+//question 10
+var a = prompt("enter lowercase input")
+document.write("User input : "+a+"<br>")
+var b =a.toUpperCase();
+document.write("Upper case : "+b)
+//question 11
+var a = prompt("enter lowercase input")
+document.write("User input : "+a+"<br>")
+var b= a.slice(0,1)
+var b = b.toUpperCase()
+//document.write(b)
+var a =a.slice(1,a.length)
+var c= b.concat(a)
+document.write("<br>Titel case : "+c)
+//question 12
+var a =35.36;
+document.write("Number : "+a+"<br>")
+var b =a.toString()
+var c =b.replace(".","");
+document.write("Result  : "+c)
+//question 13
+var a = prompt("Enter username")
+for (var i = 0; i < a.length; i++) {
+	b = a.charAt(i)
+	b=b.charCodeAt(0)
+	if (b ==33 || b==44 || b==46 || b==64){
+		document.write("Enter a valid username")
+	}
+}
+//question 14
+var a=["cake","appel pie","cookie","chips","patties"]
+document.write(a+"<br>")
+var b = prompt("enter item to be search ")
+b=b.toLowerCase()
+function find(b){
+	for (var i =0 ; i< a.length; i++){
+	if (a[i]==b) {
+		document.write(a[i]+" item is <strong>avaliable</strong> at index "+i+" i our bakery")
+		return;
+	}
+}
+document.write("we are sorry "+b+" is <strong>not avaliable</strong> in our bakery")
+}
+find(b)
+//question 15
+var a = prompt("Enter Password<br>");
+pswrdcheck(a);
+function pswrdcheck(a){
+	var b= a.slice(0,1)
+	b=b.charCodeAt(0)
+	var c = a.length
+	var cont = 1
+	str =false;
+	int =false;
+	if (b >= 48 && b<=57) {
+		document.write("Password can not begin with a number<br>Please Enter a valid password");
+		return;
+	}
+	else if (c<6){
+		document.write("Password is short<br>Please Enter a valid password");
+		return;
+	}
+	for (var i = 1; i < a.length; i++){
+		var d =a.charAt(i)
+		if (d >= 48 && d<=57) {
+			int = true;
+		}
+		if (d>= 65 && d <=90 || d>=97 || d<=122 ) {
+			str = true
+		}
+	}
+	if (!str && !int) {
+		document.write("Password must contain Alphabet and Number both<br>Please Enter a valid password")
+		return
+	}
+}
+//question 16
+var university ="University of Karachi";
+var str = []
+var str =university.split('');
+for (var i = 0; i < str.length; i++) {
+	document.write(str[i]+"<br>")
+}
+//question 17
+var a = prompt("Enter input");
+document.write("User Input: "+a)
+var b= a.charAt(a.length-1)
+document.write("<br>last Character of input : "+b)
+//question 18
+var a ="the quick brown fox jumps over the lazy dog"
+document.write("there are "+a.match(/the/g).length+" occurences of word the")

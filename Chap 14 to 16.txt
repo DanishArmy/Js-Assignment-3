@@ -1,0 +1,100 @@
+/ chapter 14-16
+// question 1
+var myArray = new Array(); 
+//question 2
+var obj ={
+};
+//question 3
+var arr1 = ["appel","banana","mango","cheery"];
+//question 4
+var arr1 =[1,2,3,4,5];
+//question 5
+var arr1 = [true,false,false,true];
+//question 6
+var arr1 = ["Muhammad Ibad",1,true,0.5]
+//question 7
+var arr1 =["SSC","HSC","BSC","BS","BCOM","MS","M.PHIL..","PHD"];
+//a= arr1.length;
+//document.write(a)
+document.write("<h1>Qualification</h1>"+"<br>")
+for (var i=0 ; i<arr1.length ; i++){
+	document.write((i+1)+") "+arr1[i]+"<br>");
+}
+//question 8
+var arr1 =["Michael","John","Tony"];
+var arr2 =[320,230,480];
+for(var i = 0; i<arr1.length;i++){
+	document.write("Score of "+arr1[i]+" is "+arr2[i]+" Percentage "+(arr2[i]/500)*100)
+	document.write("%<br>")
+}
+//question 9
+arr1 = ["blue","red","voilet"];
+document.write(arr1+"<br>");
+var a = prompt("enter colour name");
+arr1.unshift(a);
+document.write(arr1+"<br>"); 
+var b = prompt(" what color he/she wants to add to the end ");
+arr1.push(b);
+document.write(arr1+"<br>"); 
+arr1.unshift("Dark green","light green");
+document.write(arr1+"<br>"); 
+arr1.shift();
+document.write(arr1+"<br>"); 
+arr1.pop();
+document.write(arr1+"<br>"); 
+var c = prompt(" which index you wants to add a color ");
+var d = prompt("Enter Color ");
+arr1[c]=d;
+document.write(arr1+"<br>"); 
+var e = prompt("Enter  start Position for deletion");
+var f = prompt("Enter end Position for deletion");
+for(var i = e; i<=f ;i++){
+	delete arr1[i]
+}
+document.write(arr1+"<br>"); 
+//question 10
+arr1 = [320,230,480,120]
+document.write("Scores of Students : "+ arr1+"<br>");
+arr1.sort()
+document.write("Ordered Scores of Students : "+ arr1+"<br>");
+//question 11
+var arr1 = ["karachi","Lahore","Islamabad","Quetta","Peshawar"];
+document.write("Cities list:<br>");
+document.write(arr1+"<br>"); 
+document.write("<br>")
+var arr2= arr1.slice(2,4);
+document.write("Selected Cities list:<br>");
+document.write(arr2+"<br>"); 
+//question 12
+var arr1 = ["this ","is ","my ","cat "];
+document.write("Array:<br>");
+document.write(arr1+"<br>"); 
+var a =arr1.join(" ");
+document.write("String:<br>");
+document.write(a);
+//question 13
+var arr1 =[]
+arr1[0]="keyboard"
+arr1[1]="Mouse"
+arr1[2]="printer"
+arr1[3]="monitor"
+document.write("Devices:<br>");
+document.write(arr1+"<br>");
+for (var i =0; i<=arr1.length+2; i++){
+	a=arr1.shift();
+	document.write("Out :<br>");
+	document.write(a+"<br>")
+}
+//question 14
+var arr1 =[]
+arr1[0]="keyboard"
+arr1[1]="Mouse"
+arr1[2]="printer"
+arr1[3]="monitor"
+document.write("Devices:<br>");
+document.write(arr1+"<br>");
+for (var i =0; i<=arr1.length+2; i++){
+	a=arr1.pop();
+	document.write("Out :<br>");
+	document.write(a+"<br>")
+}
